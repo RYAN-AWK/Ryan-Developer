@@ -116,13 +116,6 @@ Acredito que a melhor forma de aprender é **colocando a mão no código** — c
 
 ---
 
-## 🏆 Conquistas
-
-<div align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=ryan-developer&theme=darkhub&no-frame=true&row=1&column=6" />
-</div>
-
----
 
 ## 📈 Linha do Tempo
 
@@ -131,7 +124,7 @@ Acredito que a melhor forma de aprender é **colocando a mão no código** — c
 ```mermaid
 timeline
     title Minha Jornada na Programação
-    2024 : 🌱 Primeiros passos
+    2025 : 🌱 Primeiros passos
          : HTML semântico e CSS
          : Primeiras páginas web
     2025 : 🚀 Evolução
