@@ -1,0 +1,30 @@
+name: Update README Stats
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Update stats
+        uses: thanhhaudev/github-stats@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          SHOW_METRICS: "CODING_STREAK,COMMIT_TIMES_OF_DAY,LANGUAGES_AND_TOOLS"
+
+      - name: Commit changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions@users.noreply.github.com"
+          git add README.md
+          git commit -m "📊 Atualizar estatísticas automaticamente" || echo "Sem alterações"
+          git push
